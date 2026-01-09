@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>ESSÊNCIA | Espiritualidade & Propósito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #0d1b2a; color: #ffffff; }
+    header { background: linear-gradient(135deg, #1b263b, #415a77); padding: 30px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 32px; color: #e0c36e; }
+    header p { margin: 5px 0; font-size: 16px; }
+    nav { display: flex; justify-content: space-around; background: #1b263b; padding: 10px 0; }
+    nav a { color: #ffffff; text-decoration: none; font-size: 14px; }
+    section { padding: 20px; }
+    .card { background: #415a77; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    .card h2 { margin-top: 0; color: #e0c36e; }
+    button { background: #e0c36e; color: #1b263b; border: none; padding: 12px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    footer { background: #1b263b; text-align: center; padding: 15px; font-size: 13px; color: #cccccc; }
+    textarea { width: 100%; border-radius: 8px; border: none; padding: 10px; font-family: inherit; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>ESSÊNCIA</h1>
+  <p>Espiritualidade & Propósito</p>
+  <p><strong>Fundador:</strong> Pastor Israel Kiala</p>
+</header>
+<nav>
+  <a href="#dia">Essência do Dia</a>
+  <a href="#oracao">Oração</a>
+  <a href="#rotina">Rotina</a>
+  <a href="#apoio">Apoio</a>
+</nav>
+<section id="dia">
+  <div class="card">
+    <h2>📖 Essência do Dia</h2>
+    <p id="versiculo"></p>
+    <p id="texto"></p>
+    <p><strong>Aplicação:</strong> <span id="aplicacao"></span></p>
+  </div>
+</section>
+<section id="oracao">
+  <div class="card">
+    <h2>🙏 Oração Guiada</h2>
+    <p>Senhor Deus, eu coloco minha vida em Tuas mãos. Guia meus passos, fortalece minha fé e me conduz no Teu propósito. Amém.</p>
+  </div>
+</section>
+<section id="rotina">
+  <div class="card">
+    <h2>🕊️ Rotina Espiritual Diária</h2>
+    <ul>
+      <li>📖 Ler a Palavra</li>
+      <li>🙏 Orar com sinceridade</li>
+      <li>✍️ Refletir sobre o dia</li>
+      <li>❤️ Praticar gratidão</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>📓 Diário Espiritual</h2>
+    <textarea rows="5" placeholder="Escreva o que Deus falou com você hoje..."></textarea>
+  </div>
+</section>
+<section id="apoio">
+  <div class="card">
+    <h2>🤝 Apoie esta Missão</h2>
+    <p>O ESSÊNCIA é uma missão espiritual criada para alcançar vidas, fortalecer a fé e revelar propósitos. Seu apoio voluntário mantém este projeto vivo.</p>
+    <p><em>“Quem semeia no espiritual, colhe vida.” (Gálatas 6:8)</em></p>
+    <button>Apoiar a Missão</button>
+  </div>
+</section>
+<footer>
+  <p>© 2026 ESSÊNCIA — Fundado por Pastor Israel Kiala</p>
+  <p>Espiritualidade prática para todos os dias</p>
+</footer>
+<script>
+const devocionais = [
+  {v:"Jeremias 29:11", t:"Deus tem planos de paz e futuro para você.", a:"Confie seus planos ao Senhor hoje."},
+  {v:"2 Coríntios 5:17", t:"Em Cristo você é uma nova criatura.", a:"Declare sua nova identidade."},
+  {v:"Hebreus 11:1", t:"A fé é confiar mesmo sem ver.", a:"Dê um passo de fé hoje."},
+  {v:"Jeremias 33:3", t:"Deus responde quando clamamos.", a:"Separe 5 minutos para oração."},
+  {v:"João 14:27", t:"A paz de Cristo vence toda ansiedade.", a:"Entregue sua preocupação a Deus."},
+  {v:"1 Tessalonicenses 5:18", t:"A gratidão muda ambientes espirituais.", a:"Agradeça por três coisas."},
+  {v:"Salmos 37:5", t:"Entregue o seu caminho ao Senhor.", a:"Confie suas decisões a Deus."},
+  {v:"Filipenses 4:13", t:"Tudo posso naquele que me fortalece.", a:"Reforce sua confiança em Cristo."},
+  {v:"Romanos 12:2", t:"Renove sua mente e viva o plano de Deus.", a:"Refita sobre suas atitudes hoje."},
+  {v:"Provérbios 3:5", t:"Confie no Senhor de todo o coração.", a:"Evite depender apenas da sua razão."}
+];
+const hoje = new Date().getDate() % devocionais.length;
+document.getElementById('versiculo').innerText = devocionais[hoje].v;
+document.getElementById('texto').innerText = devocionais[hoje].t;
+document.getElementById('aplicacao').innerText = devocionais[hoje].a;
+</script>
+</body>
+</html>
